@@ -1,18 +1,3 @@
-/*
- ____________________________________
-/ Hecho por Clara Contreras e Ismael \
-\ Esquilichi                         /
- ------------------------------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-*/
-
-
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -21,18 +6,6 @@
 #include <fcntl.h>
 #include "colors.h"
 #include "mypipes.h"
-
-
-/*
- _________
-< Defines >
- ---------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-*/
 #define True 1
 #define False 0
 #define ERROR -1
@@ -42,16 +15,6 @@
 #define G_USAGE "globalusage"
 #define FG "fg"
 
-/*
- ____________________
-< Variables Globales >
- --------------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-*/
 char *user;
 char hostname[64];
 uid_t uid;
@@ -59,16 +22,6 @@ int **pipes_matrix;
 job jobs_array[MAX_JOBS];
 volatile pid_t pid_to_kill;
 
-/*
- __________________________
-< Definición de funciones >
- --------------------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-*/
 
 int check_command(const char *filename);
 
@@ -85,17 +38,6 @@ void childHandler(int signal);
 void controlChandler(int signal);
 
 void my_fg(tline *line);
-
-/*
- _________
-< Código >
- ---------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-*/
 
 int main(int argc, char const *argv[]) {
     for (int i = 0; i < MAX_JOBS; ++i){

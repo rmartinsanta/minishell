@@ -2,9 +2,6 @@ main
 cmake-build-debug/*
 .idea/*
 
-# Lecture files
-*.txt
-
 # Prerequisites
 *.d
 
